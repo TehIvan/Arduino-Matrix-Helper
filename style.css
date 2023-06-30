@@ -14,11 +14,10 @@ body {
 }
 
 .box {
-  width: 10px;
+  width: 20px;
   height: 10px;
   padding: 10px;
-  margin: 10px;
-  border-radius: 50%;
+  border: black 2px solid;
   background-color: white;
 }
 
@@ -26,12 +25,10 @@ body {
   background-color: var(--secondary);
 }
 
-.grid {
+#grid {
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
-  width: 400px;
-  border: var(--accent) solid 2px;
 }
 
 main {
@@ -45,7 +42,7 @@ main {
   margin-right: 10px;
 }
 
-.text {
+#text {
   background-color: black;
   margin-top: 10px;
   border: var(--accent) 2px solid;

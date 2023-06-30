@@ -2,15 +2,56 @@ const boxes = document.getElementsByClassName("box");
 
 const code = document.getElementById("code");
 
-for (const box of boxes) {
-  box.onclick = () => {
+let size = 8;
+
+loadBoxes(8, 8)
+
+function onChange(sel) {
+    document.getElementById("grid").innerHTML = "";
+
+    const selected = sel.options[sel.selectedIndex].text;
+
+    size = parseInt(selected.split("x").pop())
+    
+    loadBoxes(8, parseInt(selected.split("x").pop()));
+}
+
+function loadBoxes(y, x) {
+    const container = document.getElementById("grid");
+    const text = document.getElementById("text");
+
+    if (x == 8) {
+        container.style.width = "380px";
+        text.style.minWidth = "360px";
+        text.style.maxWidth = "360px";
+    }
+    if (x == 16) {
+        container.style.width = "720px";
+        text.style.minWidth = "700px";
+        text.style.maxWidth = "700px";
+
+    }
+    
+    const numOfBoxes = x * y;
+
+    for (let i = 0; i < numOfBoxes; i++) {
+        const box = document.createElement('div');
+
+        box.classList.add("box");
+
+        box.onclick = () => onClick(box);
+
+        container.appendChild(box);
+    }
+}
+
+function onClick(box) {
     if (box.classList.contains("clicked")) {
       box.classList.remove("clicked");
     } else {
       box.classList.add("clicked");
     }
   };
-}
 
 function resetGrid() {
   for (const box of boxes) {
@@ -28,7 +69,7 @@ function genCode() {
   for (let i = 0; i < boxes.length; i++) {
     const box = boxes[i];
 
-    if (i % 8 == 0) {
+    if (i %  size == 0) {
       current = current + 1;
     }
 

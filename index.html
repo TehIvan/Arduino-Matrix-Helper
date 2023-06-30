@@ -11,78 +11,18 @@
 
 <body>
     <main>
-        <div class="grid">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
+        <div id="grid">
         </div>
         <div class="row">
-            <button onclick="resetGrid()" class="btn">Reset</button>
-        <button onclick="genCode()" class="btn">Print</button>
-        <button onclick="copyCode()" class="btn">Copy</button>
+            <button onclick="resetGrid()" class="btn">Reset</button>             
+            <button onclick="genCode()" class="btn">Print</button>
+            <button onclick="copyCode()" class="btn">Copy</button>
+            <select name="matrix" id="matrix" onchange="onChange(this)" style="float:right; margin-top: 10px; margin-right: 10px;">
+                <option value="8">8x8</option>
+                <option value="16">8x16</option>
+            </select> 
         </div>
-        <div class="text">
+        <div id="text">
             <code class="code" id="code"></code>
         </div>
         <footer style="padding-top: 10px; padding-bottom: 10px;">Made by <a href="https://zeply-studios.github.io/" style="text-decoration: none;"><span style="color: lightskyblue; font-size: 18px;">Zeply Studios</span></a></footer>
