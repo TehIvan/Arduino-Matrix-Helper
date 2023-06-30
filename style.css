@@ -49,6 +49,8 @@ main {
   border: var(--accent) 2px solid;
   padding: 5px;
   height: 200px;
-  width: 500px;
+  min-width: 400px;
+  max-width: 500px;
+  width: fit-content;
   overflow-y: scroll;
 }
